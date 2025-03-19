@@ -1,0 +1,26 @@
+def is_palindrome(input_string):
+    input_string = input_string.lower()
+    
+    left = 0
+    right = len(input_string) - 1
+    
+    while left < right:
+
+        if not input_string[left].isalnum():
+            left += 1
+        elif not input_string[right].isalnum():
+            right -= 1
+        elif input_string[left] != input_string[right]:
+            return False
+        else:
+            left += 1
+            right -= 1
+    
+    return True
+
+
+input_string = "A man, a plan, a canal, Panama"
+if is_palindrome(input_string):
+    print(f"'{input_string}' is a palindrome.")
+else:
+    print(f"'{input_string}' is not a palindrome.")

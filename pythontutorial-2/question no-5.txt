@@ -1,0 +1,16 @@
+def slice_string(input_string):
+    
+    even_indices_string = input_string[::2]
+    
+    
+    odd_indices_string = input_string[1::2]
+    
+    return even_indices_string, odd_indices_string
+
+input_string = input("Enter a string: ")
+
+
+even_string, odd_string = slice_string(input_string)
+
+print(f"Characters at even indices: {even_string}")
+print(f"Characters at odd indices: {odd_string}")

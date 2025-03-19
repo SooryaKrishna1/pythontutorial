@@ -1,0 +1,23 @@
+import math
+
+def sin_series(x, n_terms):
+   
+    result = 0
+    
+    
+    for n in range(n_terms):
+      
+        term = ((-1)**n) * (x**(2*n + 1)) / math.factorial(2*n + 1)
+        result += term
+    
+    return result
+
+
+x = float(input("Enter the value of x (in radians): "))
+n_terms = int(input("Enter the number of terms to approximate sin(x): "))
+
+
+result = sin_series(x, n_terms)
+
+
+print(f"The value of sin({x}) up to {n_terms} terms is: {result}")

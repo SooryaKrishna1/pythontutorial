@@ -1,0 +1,10 @@
+def modify_string(input_string):
+       if ' ' in input_string:
+        return input_string.replace(' ', '*')
+    else:
+        
+        return f"${input_string}$"
+
+input_string = input("Enter a string: ")
+
+print(modify_string(input_string))

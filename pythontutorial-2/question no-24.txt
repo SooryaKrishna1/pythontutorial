@@ -1,0 +1,20 @@
+def find_mode(numbers):
+  
+    count = Counter(numbers)
+    
+
+    max_frequency = max(count.values())
+    
+
+    mode = [key for key, value in count.items() if value == max_frequency]
+    
+    return mode
+
+
+numbers = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+mode = find_mode(numbers)
+if len(mode) == 1:
+    print("The mode is:", mode[0])
+else:
+    print("The modes are:", mode)

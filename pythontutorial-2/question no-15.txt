@@ -1,0 +1,18 @@
+import math
+
+def factorial(n):
+   
+    return math.factorial(n)
+
+def nCr(n, r):
+   
+    return factorial(n) // (factorial(r) * factorial(n - r))
+
+
+n = int(input("Enter the value of n: "))
+r = int(input("Enter the value of r: "))
+
+result = nCr(n, r)
+
+
+print(f"The value of {n}C{r} is {result}")

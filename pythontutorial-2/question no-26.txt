@@ -1,0 +1,19 @@
+mixed_list = [1, 3.14, 'hello', 42, 6.28, 'world', 7]
+
+integers = []
+floats = []
+strings = []
+
+
+for item in mixed_list:
+    if isinstance(item, int):
+        integers.append(item)
+    elif isinstance(item, float):
+        floats.append(item)
+    elif isinstance(item, str):
+        strings.append(item)
+
+
+print("Integers:", integers)
+print("Floats:", floats)
+print("Strings:", strings)

@@ -1,0 +1,12 @@
+def remove_substring(input_string, substring):
+   
+    result_string = input_string.replace(substring, "")
+    return result_string
+
+
+input_string = input("Enter the string: ")
+substring = input("Enter the substring to remove: ")
+
+modified_string = remove_substring(input_string, substring)
+
+print(f"String after removing '{substring}': {modified_string}")

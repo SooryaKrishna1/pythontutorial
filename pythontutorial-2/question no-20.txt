@@ -1,0 +1,23 @@
+def sort_names(names):
+    
+    names.sort()
+    return names
+
+
+n = int(input("Enter the number of names: "))
+
+
+names_list = []
+
+
+for _ in range(n):
+    name = input("Enter a name: ")
+    names_list.append(name)
+
+
+sorted_names = sort_names(names_list)
+
+
+print("\nSorted list of names:")
+for name in sorted_names:
+    print(name)

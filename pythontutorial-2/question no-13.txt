@@ -1,0 +1,10 @@
+def binary_to_decimal(binary_number):
+    
+    return int(binary_number, 2)
+
+binary_number = input("Enter a binary number: ")
+
+
+decimal_number = binary_to_decimal(binary_number)
+
+print(f"The decimal equivalent of binary {binary_number} is {decimal_number}")
