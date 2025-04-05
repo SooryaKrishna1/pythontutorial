@@ -1,0 +1,18 @@
+student_df = pd.read_csv('student.csv')
+
+avg_cgpa = student_df['CGPA'].mean()
+print("Average CGPA:", avg_cgpa)
+
+high_cgpa_students = student_df[student_df['CGPA'] > 9]
+print("Students with CGPA > 9:\n", high_cgpa_students)
+
+cse_high_cgpa_students = student_df[(student_df['Branch'] == 'CSE') & (student_df['CGPA'] > 9)]
+print("CSE Students with CGPA > 9:\n", cse_high_cgpa_students)
+
+
+max_cgpa_student = student_df.loc[student_df['CGPA'].idxmax()]
+print("Student with Maximum CGPA:\n", max_cgpa_student)
+
+
+avg_cgpa_per_branch = student_df.groupby('Branch')['CGPA'].mean()
+print("Average CGPA per Branch:\n", avg_cgpa_per_branch)

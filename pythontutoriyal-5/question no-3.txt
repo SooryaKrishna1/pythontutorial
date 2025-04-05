@@ -1,0 +1,4 @@
+data = {'Name': ['John', 'Jane'], 'Age': [28, 32]}
+df = pd.DataFrame(data)
+
+df.to_excel('data.xlsx', index=False)

@@ -1,0 +1,18 @@
+sales_df = pd.read_csv('sales.csv')
+
+// 1)
+plt.scatter(sales_df['month_number'], sales_df['toothpaste'])
+plt.title('Toothpaste Sales per Month')
+plt.xlabel('Month')
+plt.ylabel('Sales')
+plt.show()
+
+// 2)
+sales_df[['facecream', 'facewash']].plot(kind='bar')
+plt.title('Face Cream & Face Wash Sales')
+plt.show()
+
+// 3) 
+total_sales = sales_df[['facecream', 'facewash', 'toothpaste', 'bathingsoap', 'shampoo', 'moisturizer']].sum()
+total_sales.plot(kind='pie', autopct='%1.1f%%')
+plt.show()

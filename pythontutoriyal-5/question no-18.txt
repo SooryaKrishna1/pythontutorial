@@ -1,0 +1,31 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+weather_df = pd.read_csv('weather.csv')
+
+print("First 10 rows of weather data:")
+print(weather_df.head(10))
+
+max_temp = weather_df['temperature'].max()
+min_temp = weather_df['temperature'].min()
+print("\nMaximum Temperature:", max_temp)
+print("Minimum Temperature:", min_temp)
+
+cool_places = weather_df[weather_df['temperature'] < 28]['place'].unique()
+print("\nPlaces with Temperature < 28°C:", cool_places)
+
+cloudy_places = weather_df[weather_df['weather'] == 'Cloudy']['place'].unique()
+print("\nPlaces with Cloudy Weather:", cloudy_places)
+
+weather_counts = weather_df['weather'].value_counts().sort_values(ascending=False)
+print("\nWeather Frequency:")
+print(weather_counts)
+
+plt.figure(figsize=(12, 6))
+plt.bar(weather_df['date'], weather_df['temperature'], color='skyblue')
+plt.xlabel('Date')
+plt.ylabel('Temperature (°C)')
+plt.title('Daily Temperature')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()

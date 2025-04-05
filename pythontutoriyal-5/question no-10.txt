@@ -1,0 +1,38 @@
+stud_df = pd.read_csv('stud.csv')
+
+print(stud_df)
+
+
+stud_df.set_index('rollno', inplace=True)
+
+
+print(stud_df[['name', 'mark']])
+
+
+print(stud_df[['name', 'mark']].sort_values(by='name'))
+
+
+print(stud_df.sort_values(by='mark', ascending=False))
+
+
+print("Average Mark:", stud_df['mark'].mean())
+print("Median Mark:", stud_df['mark'].median())
+print("Mode Mark:", stud_df['mark'].mode()[0])
+
+
+print("Min Marks:", stud_df['mark'].min())
+print("Max Marks:", stud_df['mark'].max())
+
+
+print("Variance:", stud_df['mark'].var())
+print("Standard Deviation:", stud_df['mark'].std())
+
+
+import matplotlib.pyplot as plt
+stud_df['mark'].plot(kind='hist', bins=5)
+plt.title('Histogram of Marks')
+plt.show()
+
+
+stud_df.drop(columns='place', inplace=True)
+print(stud_df)

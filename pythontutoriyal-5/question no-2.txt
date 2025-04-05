@@ -1,0 +1,7 @@
+import pandas as pd
+
+data = [['Alice', 25], ['Bob', 30], ['Charlie', 22]]
+df = pd.DataFrame(data, columns=['Name', 'Age'])
+df.set_index('Name', inplace=True)
+
+print(df)

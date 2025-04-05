@@ -1,0 +1,23 @@
+auto_df = pd.read_csv('auto.csv')
+
+auto_df.dropna(inplacey
+
+most_expensive_car = auto_df.loc[auto_df['price'].idxmax(), 'company']
+print("Most Expensive Car Company:", most_expensive_car)
+
+
+toyota_cars = auto_df[auto_df['company'] == 'toyota']
+print(toyota_cars)
+
+
+car_count = auto_df['company'].value_counts()
+print(car_count)
+
+highest_priced_car = auto_df.loc[auto_df['price'].idxmax()]
+print("Highest Priced Car:", highest_priced_car)
+
+avg_mileage = auto_df['average-mileage'].mean()
+print("Average Mileage:", avg_mileage)
+
+sorted_cars = auto_df.sort_values(by='price', ascending=False)
+print(sorted_cars)
