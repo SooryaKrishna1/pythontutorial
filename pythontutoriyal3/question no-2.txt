@@ -1,0 +1,10 @@
+import turtle
+
+screen = turtle.Screen()
+pentagon = turtle.Turtle()
+
+for i in range(5):
+    pentagon.forward(100)
+    pentagon.right(72)
+
+screen.mainloop()

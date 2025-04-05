@@ -1,0 +1,12 @@
+import turtle
+
+screen = turtle.Screen()
+pattern = turtle.Turtle()
+
+for _ in range(10):
+    for _ in range(6):
+        pattern.forward(50)
+        pattern.right(60)
+    pattern.right(36) 
+
+screen.mainloop()
