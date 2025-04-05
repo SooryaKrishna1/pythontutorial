@@ -1,0 +1,16 @@
+class StudentMarks:
+    def readData(self, roll_no, mark1, mark2):
+        self.roll_no = roll_no
+        self.mark1 = mark1
+        self.mark2 = mark2
+
+    def computeTotal(self):
+        return self.mark1 + self.mark2
+
+    def printDetails(self):
+        return f"Roll No: {self.roll_no}, Marks: {self.mark1}, {self.mark2}, Total: {self.computeTotal()}"
+
+
+student = StudentMarks()
+student.readData("201", 85, 90)
+print(student.printDetails())
